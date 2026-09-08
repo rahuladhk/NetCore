@@ -47,8 +47,8 @@ $tetheringManager = [Windows.Networking.NetworkOperators.NetworkOperatorTetherin
 
 # Configure hotspot
 $config = $tetheringManager.GetCurrentAccessPointConfiguration()
-$config.Ssid="asdasdasd"
-$config.Passphrase="dasdasdasdas"
+$config.Ssid="RahulAdhk"
+$config.Passphrase="password"
 
 AwaitAction(
     $tetheringManager.ConfigureAccessPointAsync($config)
@@ -93,6 +93,8 @@ else {
 
     if ($result.Status -eq "Success") {
         Write-Output "SUCCESS: Mobile Hotspot started"
+        Write-Output "SSID      : $($config.Ssid)"
+        Write-Output "PASSWORD  : $($config.Passphrase)"
     }
     else {
         Write-Output "ERROR: Failed to start hotspot"
