@@ -1,0 +1,593 @@
+{
+  "success": true,
+  "series_id": "1510976",
+  "match_id": "1510987",
+  "raw_details": 242,
+  "fetched_details": 242,
+  "failed_details": 0,
+  "innings_count": 2,
+  "updated_at": "2026-09-08T19:40:05.710139+00:00",
+  "innings": [
+    {
+      "innings": 1,
+      "score": 157,
+      "wickets": 8,
+      "overs": 20.0,
+      "balls": 120,
+      "extras": {
+        "wides": 1,
+        "no_balls": 1,
+        "byes": 2,
+        "leg_byes": 1,
+        "total": 5
+      },
+      "batting_summary": {
+        "runs": 152,
+        "balls": 120,
+        "fours": 9,
+        "sixes": 7
+      },
+      "bowling_summary": {
+        "balls": 120,
+        "runs": 154,
+        "wickets": 8
+      },
+      "batters": [
+        {
+          "player_id": "1290593",
+          "name": null,
+          "runs": 32,
+          "balls": 36,
+          "fours": 3,
+          "sixes": 0
+        },
+        {
+          "player_id": "998369",
+          "name": null,
+          "runs": 0,
+          "balls": 1,
+          "fours": 0,
+          "sixes": 0
+        },
+        {
+          "player_id": "1161020",
+          "name": null,
+          "runs": 14,
+          "balls": 10,
+          "fours": 2,
+          "sixes": 0
+        },
+        {
+          "player_id": "451947",
+          "name": null,
+          "runs": 17,
+          "balls": 19,
+          "fours": 1,
+          "sixes": 0
+        },
+        {
+          "player_id": "21440",
+          "name": null,
+          "runs": 7,
+          "balls": 3,
+          "fours": 0,
+          "sixes": 1
+        },
+        {
+          "player_id": "1409922",
+          "name": null,
+          "runs": 26,
+          "balls": 16,
+          "fours": 0,
+          "sixes": 2
+        },
+        {
+          "player_id": "519070",
+          "name": null,
+          "runs": 17,
+          "balls": 15,
+          "fours": 2,
+          "sixes": 0
+        },
+        {
+          "player_id": "1212481",
+          "name": null,
+          "runs": 4,
+          "balls": 7,
+          "fours": 0,
+          "sixes": 0
+        },
+        {
+          "player_id": "800675",
+          "name": null,
+          "runs": 34,
+          "balls": 11,
+          "fours": 1,
+          "sixes": 4
+        },
+        {
+          "player_id": "1090597",
+          "name": null,
+          "runs": 1,
+          "balls": 2,
+          "fours": 0,
+          "sixes": 0
+        }
+      ],
+      "bowlers": [
+        {
+          "player_id": "698317",
+          "name": null,
+          "overs": 4.0,
+          "balls": 24,
+          "maidens": 0,
+          "runs": 43,
+          "wickets": 2
+        },
+        {
+          "player_id": "1147801",
+          "name": null,
+          "overs": 4.0,
+          "balls": 24,
+          "maidens": 0,
+          "runs": 33,
+          "wickets": 2
+        },
+        {
+          "player_id": "1463601",
+          "name": null,
+          "overs": 2.0,
+          "balls": 12,
+          "maidens": 0,
+          "runs": 22,
+          "wickets": 0
+        },
+        {
+          "player_id": "352048",
+          "name": null,
+          "overs": 3.0,
+          "balls": 18,
+          "maidens": 0,
+          "runs": 20,
+          "wickets": 2
+        },
+        {
+          "player_id": "1211767",
+          "name": null,
+          "overs": 3.0,
+          "balls": 18,
+          "maidens": 0,
+          "runs": 14,
+          "wickets": 0
+        },
+        {
+          "player_id": "308798",
+          "name": null,
+          "overs": 3.0,
+          "balls": 18,
+          "maidens": 0,
+          "runs": 13,
+          "wickets": 0
+        },
+        {
+          "player_id": "1072488",
+          "name": null,
+          "overs": 1.0,
+          "balls": 6,
+          "maidens": 0,
+          "runs": 9,
+          "wickets": 2
+        }
+      ],
+      "wicket_events": [
+        {
+          "delivery_id": "11010",
+          "sequence": 100101,
+          "over": 2,
+          "ball": 1,
+          "batsman_id": "998369",
+          "batsman": null,
+          "dismissal_type": "bowled",
+          "bowler_id": "1147801",
+          "bowler": null,
+          "text": "",
+          "short_text": "Malla to Charlesworth, OUT"
+        },
+        {
+          "delivery_id": "14030",
+          "sequence": 100403,
+          "over": 5,
+          "ball": 3,
+          "batsman_id": "1161020",
+          "batsman": null,
+          "dismissal_type": "caught",
+          "bowler_id": "698317",
+          "bowler": null,
+          "text": "",
+          "short_text": "Trumpelmann to Rashid Khan, OUT"
+        },
+        {
+          "delivery_id": "110040",
+          "sequence": 101004,
+          "over": 11,
+          "ball": 4,
+          "batsman_id": "1290593",
+          "batsman": null,
+          "dismissal_type": "caught",
+          "bowler_id": "1147801",
+          "bowler": null,
+          "text": "",
+          "short_text": "Malla to Tripathi, OUT"
+        },
+        {
+          "delivery_id": "111020",
+          "sequence": 101102,
+          "over": 12,
+          "ball": 2,
+          "batsman_id": "21440",
+          "batsman": null,
+          "dismissal_type": "caught",
+          "bowler_id": "1072488",
+          "bowler": null,
+          "text": "",
+          "short_text": "Paudel to Simpson, OUT"
+        },
+        {
+          "delivery_id": "111060",
+          "sequence": 101106,
+          "over": 12,
+          "ball": 6,
+          "batsman_id": "451947",
+          "batsman": null,
+          "dismissal_type": "caught",
+          "bowler_id": "1072488",
+          "bowler": null,
+          "text": "",
+          "short_text": "Paudel to Milind Kumar, OUT"
+        },
+        {
+          "delivery_id": "116020",
+          "sequence": 101602,
+          "over": 17,
+          "ball": 2,
+          "batsman_id": "1409922",
+          "batsman": null,
+          "dismissal_type": "caught",
+          "bowler_id": "698317",
+          "bowler": null,
+          "text": "",
+          "short_text": "Trumpelmann to Santosh Yadav, OUT"
+        },
+        {
+          "delivery_id": "117040",
+          "sequence": 101704,
+          "over": 18,
+          "ball": 4,
+          "batsman_id": "519070",
+          "batsman": null,
+          "dismissal_type": "caught",
+          "bowler_id": "352048",
+          "bowler": null,
+          "text": "",
+          "short_text": "Gulbadin Naib to Erasmus, OUT"
+        },
+        {
+          "delivery_id": "119010",
+          "sequence": 101901,
+          "over": 20,
+          "ball": 1,
+          "batsman_id": "1212481",
+          "batsman": null,
+          "dismissal_type": "caught",
+          "bowler_id": "352048",
+          "bowler": null,
+          "text": "",
+          "short_text": "Gulbadin Naib to Mohammad Aadil Alam, OUT"
+        }
+      ]
+    },
+    {
+      "innings": 2,
+      "score": 135,
+      "wickets": 10,
+      "overs": 19.1,
+      "balls": 115,
+      "extras": {
+        "wides": 4,
+        "no_balls": 1,
+        "byes": 0,
+        "leg_byes": 4,
+        "total": 9
+      },
+      "batting_summary": {
+        "runs": 126,
+        "balls": 116,
+        "fours": 9,
+        "sixes": 6
+      },
+      "bowling_summary": {
+        "balls": 115,
+        "runs": 131,
+        "wickets": 8
+      },
+      "batters": [
+        {
+          "player_id": "1161022",
+          "name": null,
+          "runs": 7,
+          "balls": 5,
+          "fours": 1,
+          "sixes": 0
+        },
+        {
+          "player_id": "308798",
+          "name": null,
+          "runs": 22,
+          "balls": 11,
+          "fours": 3,
+          "sixes": 1
+        },
+        {
+          "player_id": "1072488",
+          "name": null,
+          "runs": 11,
+          "balls": 16,
+          "fours": 0,
+          "sixes": 0
+        },
+        {
+          "player_id": "352048",
+          "name": null,
+          "runs": 11,
+          "balls": 6,
+          "fours": 1,
+          "sixes": 1
+        },
+        {
+          "player_id": "1058516",
+          "name": null,
+          "runs": 25,
+          "balls": 33,
+          "fours": 1,
+          "sixes": 1
+        },
+        {
+          "player_id": "553821",
+          "name": null,
+          "runs": 8,
+          "balls": 7,
+          "fours": 1,
+          "sixes": 0
+        },
+        {
+          "player_id": "1090608",
+          "name": null,
+          "runs": 0,
+          "balls": 1,
+          "fours": 0,
+          "sixes": 0
+        },
+        {
+          "player_id": "698317",
+          "name": null,
+          "runs": 5,
+          "balls": 3,
+          "fours": 1,
+          "sixes": 0
+        },
+        {
+          "player_id": "1147801",
+          "name": null,
+          "runs": 27,
+          "balls": 18,
+          "fours": 0,
+          "sixes": 3
+        },
+        {
+          "player_id": "1463601",
+          "name": null,
+          "runs": 4,
+          "balls": 8,
+          "fours": 0,
+          "sixes": 0
+        },
+        {
+          "player_id": "1211767",
+          "name": null,
+          "runs": 6,
+          "balls": 8,
+          "fours": 1,
+          "sixes": 0
+        }
+      ],
+      "bowlers": [
+        {
+          "player_id": "800675",
+          "name": null,
+          "overs": 4.0,
+          "balls": 24,
+          "maidens": 0,
+          "runs": 36,
+          "wickets": 1
+        },
+        {
+          "player_id": "451947",
+          "name": null,
+          "overs": 4.0,
+          "balls": 24,
+          "maidens": 0,
+          "runs": 18,
+          "wickets": 2
+        },
+        {
+          "player_id": "519070",
+          "name": null,
+          "overs": 4.0,
+          "balls": 24,
+          "maidens": 0,
+          "runs": 27,
+          "wickets": 2
+        },
+        {
+          "player_id": "1090597",
+          "name": null,
+          "overs": 3.0,
+          "balls": 18,
+          "maidens": 0,
+          "runs": 31,
+          "wickets": 1
+        },
+        {
+          "player_id": "1409922",
+          "name": null,
+          "overs": 1.0,
+          "balls": 6,
+          "maidens": 0,
+          "runs": 3,
+          "wickets": 1
+        },
+        {
+          "player_id": "1161020",
+          "name": null,
+          "overs": 3.1,
+          "balls": 19,
+          "maidens": 0,
+          "runs": 16,
+          "wickets": 1
+        }
+      ],
+      "wicket_events": [
+        {
+          "delivery_id": "21020",
+          "sequence": 200102,
+          "over": 2,
+          "ball": 2,
+          "batsman_id": "1161022",
+          "batsman": null,
+          "dismissal_type": "caught",
+          "bowler_id": "451947",
+          "bowler": null,
+          "text": "",
+          "short_text": "Milind Kumar to Jora, OUT"
+        },
+        {
+          "delivery_id": "23020",
+          "sequence": 200302,
+          "over": 4,
+          "ball": 2,
+          "batsman_id": "308798",
+          "batsman": null,
+          "dismissal_type": "caught",
+          "bowler_id": "451947",
+          "bowler": null,
+          "text": "",
+          "short_text": "Milind Kumar to Short, OUT"
+        },
+        {
+          "delivery_id": "24040",
+          "sequence": 200404,
+          "over": 5,
+          "ball": 4,
+          "batsman_id": "352048",
+          "batsman": null,
+          "dismissal_type": "caught",
+          "bowler_id": "1090597",
+          "bowler": null,
+          "text": "",
+          "short_text": "Shahab Alam to Gulbadin Naib, OUT"
+        },
+        {
+          "delivery_id": "27050",
+          "sequence": 200705,
+          "over": 8,
+          "ball": 5,
+          "batsman_id": "1072488",
+          "batsman": null,
+          "dismissal_type": "leg before wicket",
+          "bowler_id": "519070",
+          "bowler": null,
+          "text": "",
+          "short_text": "Erasmus to Paudel, OUT"
+        },
+        {
+          "delivery_id": "210040",
+          "sequence": 201004,
+          "over": 11,
+          "ball": 4,
+          "batsman_id": "553821",
+          "batsman": null,
+          "dismissal_type": "caught",
+          "bowler_id": "1409922",
+          "bowler": null,
+          "text": "",
+          "short_text": "Santosh Yadav to Smit, OUT"
+        },
+        {
+          "delivery_id": "210060",
+          "sequence": 201006,
+          "over": 11,
+          "ball": 6,
+          "batsman_id": "1058516",
+          "batsman": null,
+          "dismissal_type": "run out",
+          "bowler_id": "1409922",
+          "bowler": null,
+          "text": "",
+          "short_text": "Santosh Yadav to Nath, OUT"
+        },
+        {
+          "delivery_id": "211050",
+          "sequence": 201105,
+          "over": 12,
+          "ball": 5,
+          "batsman_id": "698317",
+          "batsman": null,
+          "dismissal_type": "caught",
+          "bowler_id": "519070",
+          "bowler": null,
+          "text": "",
+          "short_text": "Erasmus to Trumpelmann, OUT"
+        },
+        {
+          "delivery_id": "215050",
+          "sequence": 201505,
+          "over": 16,
+          "ball": 5,
+          "batsman_id": "1058516",
+          "batsman": null,
+          "dismissal_type": "caught",
+          "bowler_id": "800675",
+          "bowler": null,
+          "text": "",
+          "short_text": "Karan KC to Nath, OUT"
+        },
+        {
+          "delivery_id": "217010",
+          "sequence": 201701,
+          "over": 18,
+          "ball": 1,
+          "batsman_id": "1147801",
+          "batsman": null,
+          "dismissal_type": "run out",
+          "bowler_id": "1161020",
+          "bowler": null,
+          "text": "",
+          "short_text": "Rashid Khan to Malla, 1 run, OUT"
+        },
+        {
+          "delivery_id": "219010",
+          "sequence": 201901,
+          "over": 20,
+          "ball": 1,
+          "batsman_id": "1463601",
+          "batsman": null,
+          "dismissal_type": "caught",
+          "bowler_id": "1161020",
+          "bowler": null,
+          "text": "",
+          "short_text": "Rashid Khan to Gautam, OUT"
+        }
+      ]
+    }
+  ]
+}

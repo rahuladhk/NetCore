@@ -1,0 +1,152 @@
+{
+  "$ref": "http://core.espnuk.org/v2/sports/cricket/leagues/1510976/events/1510977/competitions/1510977/details/110",
+  "id": "110",
+  "uid": "s:200~e:1510977~c:1510977~d:50495417",
+  "clock": "00:00",
+  "date": "2025-11-17T16:00Z",
+  "playType": {
+    "id": "8",
+    "description": "leg bye"
+  },
+  "team": {
+    "$ref": "http://core.espnuk.org/v2/sports/cricket/teams/1462595"
+  },
+  "mediaId": 0,
+  "period": 1,
+  "periodText": "1st innings",
+  "shortPeriodText": "1st innings",
+  "xCoordinate": null,
+  "yCoordinate": null,
+  "preText": "",
+  "text": "",
+  "postText": "",
+  "shortText": "Karan KC to Milantha, 4 leg byes",
+  "homeScore": "4/0",
+  "awayScore": "0",
+  "scoreValue": 4,
+  "sequence": 100001,
+  "athletesInvolved": [
+    {
+      "$ref": "http://core.espnuk.org/v2/sports/cricket/leagues/1510976/athletes/699483"
+    },
+    {
+      "$ref": "http://core.espnuk.org/v2/sports/cricket/leagues/1510976/athletes/800675"
+    }
+  ],
+  "hawkeyeId": null,
+  "boundary": true,
+  "speedKPH": null,
+  "speedMPH": null,
+  "bowler": {
+    "athlete": {
+      "$ref": "http://core.espnuk.org/v2/sports/cricket/leagues/1510976/athletes/800675"
+    },
+    "team": {
+      "$ref": "http://core.espnuk.org/v2/sports/cricket/teams/1462632/"
+    },
+    "maidens": 0,
+    "balls": 1,
+    "wickets": 0,
+    "overs": 0.1,
+    "conceded": 0
+  },
+  "otherBowler": {
+    "athlete": {
+      "$ref": "http://core.espnuk.org/v2/sports/cricket/leagues/1510976/athletes/0"
+    },
+    "team": {
+      "$ref": "http://core.espnuk.org/v2/sports/cricket/teams/1462632/"
+    },
+    "maidens": 0,
+    "balls": 0,
+    "wickets": 0,
+    "overs": 0,
+    "conceded": 0
+  },
+  "batsman": {
+    "athlete": {
+      "$ref": "http://core.espnuk.org/v2/sports/cricket/leagues/1510976/athletes/699483"
+    },
+    "team": {
+      "$ref": "http://core.espnuk.org/v2/sports/cricket/teams/1462595/"
+    },
+    "totalRuns": 0,
+    "faced": 1,
+    "fours": 0,
+    "runs": 0,
+    "sixes": 0
+  },
+  "otherBatsman": {
+    "athlete": {
+      "$ref": "http://core.espnuk.org/v2/sports/cricket/leagues/1510976/athletes/0"
+    },
+    "team": {
+      "$ref": "http://core.espnuk.org/v2/sports/cricket/teams/1462595/"
+    },
+    "totalRuns": 0,
+    "faced": 0,
+    "fours": 0,
+    "runs": 0,
+    "sixes": 0
+  },
+  "innings": {
+    "id": "280219",
+    "runRate": 24,
+    "remainingBalls": 0,
+    "byes": 0,
+    "number": 1,
+    "balls": 1,
+    "noBalls": 0,
+    "requiredRunRate": null,
+    "wickets": 0,
+    "legByes": 4,
+    "ballLimit": 0,
+    "target": 0,
+    "session": 0,
+    "day": 0,
+    "fallOfWickets": 0,
+    "trailBy": 0,
+    "leadBy": 0,
+    "remainingRuns": null,
+    "remainingOvers": 0.0,
+    "totalRuns": 4,
+    "wides": 0,
+    "runs": 4
+  },
+  "over": {
+    "ball": 1,
+    "balls": 6,
+    "complete": false,
+    "limit": 0.0,
+    "maiden": 0,
+    "noBall": 0,
+    "wide": 0,
+    "legByes": 4,
+    "byes": 0,
+    "number": 1,
+    "runs": 10,
+    "wickets": 0,
+    "overs": 0.1,
+    "actual": 0.1,
+    "unique": 0.01
+  },
+  "dismissal": {
+    "dismissal": false,
+    "bowled": false,
+    "type": "",
+    "bowler": {
+      "athlete": {
+        "$ref": "http://core.espnuk.org/v2/sports/cricket/leagues/1510976/athletes/800675"
+      }
+    },
+    "batsman": {
+      "athlete": {
+        "$ref": "http://core.espnuk.org/v2/sports/cricket/leagues/1510976/athletes/699483"
+      }
+    },
+    "text": "",
+    "minutes": 0,
+    "retiredText": ""
+  },
+  "bbbTimestamp": 0
+}

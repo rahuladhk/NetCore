@@ -1,0 +1,66 @@
+[
+  {
+    "team_id": 7237,
+    "name": "Sudur Paschim Royals (NPL)",
+    "short_name": "S Paschim",
+    "abbreviation": "SPR",
+    "slug": "sudur-paschim-royals-npl",
+    "logo": "/lsci/db/PICTURES/CMS/391900/391989.png"
+  },
+  {
+    "team_id": 7233,
+    "name": "Biratnagar Kings (NPL)",
+    "short_name": "Biratnagar",
+    "abbreviation": "BIK",
+    "slug": "biratnagar-kings-npl",
+    "logo": "/lsci/db/PICTURES/CMS/391900/391936.jpg"
+  },
+  {
+    "team_id": 7234,
+    "name": "Kathmandu Gorkhas (NPL)",
+    "short_name": "Kathmandu",
+    "abbreviation": "KAG",
+    "slug": "kathmandu-gorkhas-npl",
+    "logo": "/lsci/db/PICTURES/CMS/409300/409375.png"
+  },
+  {
+    "team_id": 7239,
+    "name": "Lumbini Lions (NPL)",
+    "short_name": "Lumbini",
+    "abbreviation": "LUL",
+    "slug": "lumbini-lions-npl",
+    "logo": "/lsci/db/PICTURES/CMS/409300/409382.png"
+  },
+  {
+    "team_id": 7238,
+    "name": "Pokhara Avengers (NPL)",
+    "short_name": "Pokhara",
+    "abbreviation": "POA",
+    "slug": "pokhara-avengers-npl",
+    "logo": "/lsci/db/PICTURES/CMS/409300/409376.png"
+  },
+  {
+    "team_id": 7236,
+    "name": "Karnali Yaks (NPL)",
+    "short_name": "Karnali",
+    "abbreviation": "KAY",
+    "slug": "karnali-yaks-npl",
+    "logo": "/lsci/db/PICTURES/CMS/392000/392046.png"
+  },
+  {
+    "team_id": 7235,
+    "name": "Chitwan Rhinos (NPL)",
+    "short_name": "Chitwan",
+    "abbreviation": "CHR",
+    "slug": "chitwan-rhinos-npl",
+    "logo": "/lsci/db/PICTURES/CMS/409800/409831.png"
+  },
+  {
+    "team_id": 7232,
+    "name": "Janakpur Bolts (NPL)",
+    "short_name": "Janakpur",
+    "abbreviation": "JAB",
+    "slug": "janakpur-bolts-npl",
+    "logo": "/lsci/db/PICTURES/CMS/409600/409664.png"
+  }
+]

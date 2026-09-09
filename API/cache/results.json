@@ -1,0 +1,312 @@
+[
+  {
+    "match_id": 123259,
+    "object_id": 1511008,
+    "title": "Final",
+    "date": "2025-12-13T00:00:00.000Z",
+    "time": "2025-12-13T09:45:00.000Z",
+    "status": "RESULT",
+    "status_text": "Lumbini won by 6 wickets (with 66 balls remaining)",
+    "winner_team_id": 7239,
+    "venue": "Tribhuvan University International Cricket Ground, Kirtipur",
+    "teams": [
+      {
+        "team_id": 7237,
+        "name": "Sudur Paschim Royals (NPL)",
+        "short_name": "S Paschim",
+        "abbreviation": "SPR",
+        "score": "85",
+        "score_info": null,
+        "logo": "/lsci/db/PICTURES/CMS/391900/391989.png"
+      },
+      {
+        "team_id": 7239,
+        "name": "Lumbini Lions (NPL)",
+        "short_name": "Lumbini",
+        "abbreviation": "LUL",
+        "score": "86/4",
+        "score_info": "9/20 ov, T:86",
+        "logo": "/lsci/db/PICTURES/CMS/409300/409382.png"
+      }
+    ]
+  },
+  {
+    "match_id": 123258,
+    "object_id": 1511007,
+    "title": "Qualifier 2",
+    "date": "2025-12-11T00:00:00.000Z",
+    "time": "2025-12-11T10:15:00.000Z",
+    "status": "RESULT",
+    "status_text": "Lumbini won by 40 runs",
+    "winner_team_id": 7239,
+    "venue": "Tribhuvan University International Cricket Ground, Kirtipur",
+    "teams": [
+      {
+        "team_id": 7239,
+        "name": "Lumbini Lions (NPL)",
+        "short_name": "Lumbini",
+        "abbreviation": "LUL",
+        "score": "134/8",
+        "score_info": null,
+        "logo": "/lsci/db/PICTURES/CMS/409300/409382.png"
+      },
+      {
+        "team_id": 7233,
+        "name": "Biratnagar Kings (NPL)",
+        "short_name": "Biratnagar",
+        "abbreviation": "BIK",
+        "score": "94",
+        "score_info": "17.5/20 ov, T:135",
+        "logo": "/lsci/db/PICTURES/CMS/391900/391936.jpg"
+      }
+    ]
+  },
+  {
+    "match_id": 123257,
+    "object_id": 1511006,
+    "title": "Eliminator",
+    "date": "2025-12-10T00:00:00.000Z",
+    "time": "2025-12-10T10:15:00.000Z",
+    "status": "RESULT",
+    "status_text": "Lumbini won by 4 wickets (with 14 balls remaining)",
+    "winner_team_id": 7239,
+    "venue": "Tribhuvan University International Cricket Ground, Kirtipur",
+    "teams": [
+      {
+        "team_id": 7234,
+        "name": "Kathmandu Gorkhas (NPL)",
+        "short_name": "Kathmandu",
+        "abbreviation": "KAG",
+        "score": "111",
+        "score_info": null,
+        "logo": "/lsci/db/PICTURES/CMS/409300/409375.png"
+      },
+      {
+        "team_id": 7239,
+        "name": "Lumbini Lions (NPL)",
+        "short_name": "Lumbini",
+        "abbreviation": "LUL",
+        "score": "112/6",
+        "score_info": "17.4/20 ov, T:112",
+        "logo": "/lsci/db/PICTURES/CMS/409300/409382.png"
+      }
+    ]
+  },
+  {
+    "match_id": 123256,
+    "object_id": 1511005,
+    "title": "Qualifier 1",
+    "date": "2025-12-09T00:00:00.000Z",
+    "time": "2025-12-09T10:15:00.000Z",
+    "status": "RESULT",
+    "status_text": "S Paschim won by 77 runs",
+    "winner_team_id": 7237,
+    "venue": "Tribhuvan University International Cricket Ground, Kirtipur",
+    "teams": [
+      {
+        "team_id": 7237,
+        "name": "Sudur Paschim Royals (NPL)",
+        "short_name": "S Paschim",
+        "abbreviation": "SPR",
+        "score": "155/7",
+        "score_info": null,
+        "logo": "/lsci/db/PICTURES/CMS/391900/391989.png"
+      },
+      {
+        "team_id": 7233,
+        "name": "Biratnagar Kings (NPL)",
+        "short_name": "Biratnagar",
+        "abbreviation": "BIK",
+        "score": "78",
+        "score_info": "14.1/20 ov, T:156",
+        "logo": "/lsci/db/PICTURES/CMS/391900/391936.jpg"
+      }
+    ]
+  },
+  {
+    "match_id": 123255,
+    "object_id": 1511004,
+    "title": "28th Match",
+    "date": "2025-12-07T00:00:00.000Z",
+    "time": "2025-12-07T09:45:00.000Z",
+    "status": "RESULT",
+    "status_text": "Karnali won by 3 runs",
+    "winner_team_id": 7236,
+    "venue": "Tribhuvan University International Cricket Ground, Kirtipur",
+    "teams": [
+      {
+        "team_id": 7236,
+        "name": "Karnali Yaks (NPL)",
+        "short_name": "Karnali",
+        "abbreviation": "KAY",
+        "score": "129/9",
+        "score_info": null,
+        "logo": "/lsci/db/PICTURES/CMS/392000/392046.png"
+      },
+      {
+        "team_id": 7232,
+        "name": "Janakpur Bolts (NPL)",
+        "short_name": "Janakpur",
+        "abbreviation": "JAB",
+        "score": "126/7",
+        "score_info": "20 ov, T:130",
+        "logo": "/lsci/db/PICTURES/CMS/409600/409664.png"
+      }
+    ]
+  },
+  {
+    "match_id": 123254,
+    "object_id": 1511003,
+    "title": "27th Match",
+    "date": "2025-12-06T00:00:00.000Z",
+    "time": "2025-12-06T09:45:00.000Z",
+    "status": "RESULT",
+    "status_text": "Pokhara won by 8 wickets (with 2 balls remaining)",
+    "winner_team_id": 7238,
+    "venue": "Tribhuvan University International Cricket Ground, Kirtipur",
+    "teams": [
+      {
+        "team_id": 7235,
+        "name": "Chitwan Rhinos (NPL)",
+        "short_name": "Chitwan",
+        "abbreviation": "CHR",
+        "score": "120/6",
+        "score_info": null,
+        "logo": "/lsci/db/PICTURES/CMS/409800/409831.png"
+      },
+      {
+        "team_id": 7238,
+        "name": "Pokhara Avengers (NPL)",
+        "short_name": "Pokhara",
+        "abbreviation": "POA",
+        "score": "121/2",
+        "score_info": "19.4/20 ov, T:121",
+        "logo": "/lsci/db/PICTURES/CMS/409300/409376.png"
+      }
+    ]
+  },
+  {
+    "match_id": 123253,
+    "object_id": 1511002,
+    "title": "26th Match",
+    "date": "2025-12-06T00:00:00.000Z",
+    "time": "2025-12-06T05:30:00.000Z",
+    "status": "RESULT",
+    "status_text": "Biratnagar won by 6 wickets (with 49 balls remaining)",
+    "winner_team_id": 7233,
+    "venue": "Tribhuvan University International Cricket Ground, Kirtipur",
+    "teams": [
+      {
+        "team_id": 7237,
+        "name": "Sudur Paschim Royals (NPL)",
+        "short_name": "S Paschim",
+        "abbreviation": "SPR",
+        "score": "147/6",
+        "score_info": null,
+        "logo": "/lsci/db/PICTURES/CMS/391900/391989.png"
+      },
+      {
+        "team_id": 7233,
+        "name": "Biratnagar Kings (NPL)",
+        "short_name": "Biratnagar",
+        "abbreviation": "BIK",
+        "score": "150/4",
+        "score_info": "11.5/20 ov, T:148",
+        "logo": "/lsci/db/PICTURES/CMS/391900/391936.jpg"
+      }
+    ]
+  },
+  {
+    "match_id": 123252,
+    "object_id": 1511001,
+    "title": "25th Match",
+    "date": "2025-12-05T00:00:00.000Z",
+    "time": "2025-12-05T10:15:00.000Z",
+    "status": "RESULT",
+    "status_text": "Lumbini won by 4 wickets (with 5 balls remaining)",
+    "winner_team_id": 7239,
+    "venue": "Tribhuvan University International Cricket Ground, Kirtipur",
+    "teams": [
+      {
+        "team_id": 7232,
+        "name": "Janakpur Bolts (NPL)",
+        "short_name": "Janakpur",
+        "abbreviation": "JAB",
+        "score": "132/6",
+        "score_info": null,
+        "logo": "/lsci/db/PICTURES/CMS/409600/409664.png"
+      },
+      {
+        "team_id": 7239,
+        "name": "Lumbini Lions (NPL)",
+        "short_name": "Lumbini",
+        "abbreviation": "LUL",
+        "score": "136/6",
+        "score_info": "19.1/20 ov, T:133",
+        "logo": "/lsci/db/PICTURES/CMS/409300/409382.png"
+      }
+    ]
+  },
+  {
+    "match_id": 123251,
+    "object_id": 1511000,
+    "title": "24th Match",
+    "date": "2025-12-04T00:00:00.000Z",
+    "time": "2025-12-04T10:15:00.000Z",
+    "status": "RESULT",
+    "status_text": "S Paschim won by 49 runs",
+    "winner_team_id": 7237,
+    "venue": "Tribhuvan University International Cricket Ground, Kirtipur",
+    "teams": [
+      {
+        "team_id": 7237,
+        "name": "Sudur Paschim Royals (NPL)",
+        "short_name": "S Paschim",
+        "abbreviation": "SPR",
+        "score": "169/4",
+        "score_info": null,
+        "logo": "/lsci/db/PICTURES/CMS/391900/391989.png"
+      },
+      {
+        "team_id": 7235,
+        "name": "Chitwan Rhinos (NPL)",
+        "short_name": "Chitwan",
+        "abbreviation": "CHR",
+        "score": "120",
+        "score_info": "17.1/20 ov, T:170",
+        "logo": "/lsci/db/PICTURES/CMS/409800/409831.png"
+      }
+    ]
+  },
+  {
+    "match_id": 123250,
+    "object_id": 1510999,
+    "title": "23rd Match",
+    "date": "2025-12-04T00:00:00.000Z",
+    "time": "2025-12-04T06:00:00.000Z",
+    "status": "RESULT",
+    "status_text": "Kathmandu won by 13 runs",
+    "winner_team_id": 7234,
+    "venue": "Tribhuvan University International Cricket Ground, Kirtipur",
+    "teams": [
+      {
+        "team_id": 7234,
+        "name": "Kathmandu Gorkhas (NPL)",
+        "short_name": "Kathmandu",
+        "abbreviation": "KAG",
+        "score": "165/8",
+        "score_info": null,
+        "logo": "/lsci/db/PICTURES/CMS/409300/409375.png"
+      },
+      {
+        "team_id": 7238,
+        "name": "Pokhara Avengers (NPL)",
+        "short_name": "Pokhara",
+        "abbreviation": "POA",
+        "score": "152",
+        "score_info": "20 ov, T:166",
+        "logo": "/lsci/db/PICTURES/CMS/409300/409376.png"
+      }
+    ]
+  }
+]
