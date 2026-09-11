@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NetCore - Coming Soon</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+
+        /* =========================
+           COMING SOON PAGE
+        ========================= */
+
+        .coming-soon-page {
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .coming-header {
+            height: 80px;
+
+            padding: 0 7%;
+
+            display: flex;
+            align-items: center;
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+            background: rgba(10, 14, 25, 0.75);
+
+            backdrop-filter: blur(15px);
+        }
+
+
+        .coming-logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+
+        .coming-logo h1 {
+            font-size: 21px;
+            font-weight: 600;
+        }
+
+
+        .coming-logo p {
+            color: #8e98aa;
+            font-size: 12px;
+            margin-top: 3px;
+        }
+
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        .coming-main {
+            flex: 1;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 60px 20px;
+        }
+
+
+        .coming-card {
+            width: 100%;
+            max-width: 620px;
+
+            padding: 55px 45px;
+
+            text-align: center;
+
+            background: rgba(20, 27, 43, 0.75);
+
+            border: 1px solid rgba(255, 255, 255, 0.08);
+
+            border-radius: 22px;
+
+            backdrop-filter: blur(18px);
+
+            box-shadow:
+                0 25px 70px rgba(0, 0, 0, 0.35);
+        }
+
+
+        /* =========================
+           ICON
+        ========================= */
+
+        .coming-icon {
+            width: 75px;
+            height: 75px;
+
+            margin: 0 auto 28px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 20px;
+
+            background: rgba(75, 155, 255, 0.12);
+
+            border: 1px solid rgba(75, 155, 255, 0.18);
+
+            font-size: 35px;
+
+            filter: drop-shadow(
+                0 0 18px rgba(75, 155, 255, 0.35)
+            );
+        }
+
+
+        /* =========================
+           TEXT
+        ========================= */
+
+        .coming-card h2 {
+            font-size: 38px;
+
+            font-weight: 600;
+
+            letter-spacing: -1px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .coming-card .subtitle {
+            color: #929caf;
+
+            font-size: 15px;
+
+            line-height: 1.7;
+
+            max-width: 470px;
+
+            margin: 0 auto;
+        }
+
+
+        .windows-only {
+            margin-top: 25px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 8px 14px;
+
+            border-radius: 20px;
+
+            background: rgba(53, 208, 127, 0.08);
+
+            border: 1px solid rgba(53, 208, 127, 0.15);
+
+            color: #73dca0;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .coming-button {
+            margin-top: 32px;
+
+            padding: 12px 25px;
+
+            border: none;
+
+            border-radius: 9px;
+
+            background: #347ec9;
+
+            color: white;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: 0.2s ease;
+        }
+
+
+        .coming-button:hover {
+            background: #408fe0;
+
+            transform: translateY(-2px);
+        }
+
+
+        .coming-button:active {
+            transform: scale(0.98);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .coming-footer {
+            text-align: center;
+
+            padding: 25px;
+
+            color: #566073;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .coming-header {
+                height: 70px;
+
+                padding: 0 20px;
+            }
+
+
+            .coming-logo {
+                gap: 10px;
+            }
+
+
+            .coming-logo h1 {
+                font-size: 18px;
+            }
+
+
+            .coming-logo p {
+                font-size: 11px;
+            }
+
+
+            .windows-icon {
+                width: 28px;
+                height: 28px;
+            }
+
+
+            .coming-main {
+                padding: 35px 18px;
+            }
+
+
+            .coming-card {
+                padding: 40px 25px;
+
+                border-radius: 18px;
+            }
+
+
+            .coming-icon {
+                width: 65px;
+                height: 65px;
+
+                font-size: 30px;
+
+                border-radius: 17px;
+
+                margin-bottom: 24px;
+            }
+
+
+            .coming-card h2 {
+                font-size: 30px;
+
+                letter-spacing: -0.5px;
+            }
+
+
+            .coming-card .subtitle {
+                font-size: 14px;
+            }
+
+
+            .windows-only {
+                font-size: 11px;
+            }
+
+
+            .coming-button {
+                width: 100%;
+
+                margin-top: 28px;
+            }
+        }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 400px) {
+
+            .coming-header {
+                padding: 0 15px;
+            }
+
+
+            .coming-logo h1 {
+                font-size: 17px;
+            }
+
+
+            .coming-logo p {
+                font-size: 10px;
+            }
+
+
+            .windows-icon {
+                width: 25px;
+                height: 25px;
+            }
+
+
+            .coming-card {
+                padding: 35px 20px;
+            }
+
+
+            .coming-card h2 {
+                font-size: 27px;
+            }
+
+
+            .coming-card .subtitle {
+                font-size: 13px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="background coming-soon-page">
+
+        <!-- HEADER -->
+
+        <header class="coming-header">
+
+            <div class="coming-logo">
+
+                <div class="windows-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div>
+                    <h1>NetCore</h1>
+                    <p>Wireless Network Control</p>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- MAIN -->
+
+        <main class="coming-main">
+
+            <section class="coming-card">
+
+                <div class="coming-icon">
+                    📡
+                </div>
+
+
+                <h2>Coming Soon</h2>
+
+
+                <p class="subtitle">
+                    NetCore is currently available for Windows devices.
+                    Support for your device is coming soon.
+                </p>
+
+
+                <div class="windows-only">
+                    ✓ Currently available on Windows
+                </div>
+
+
+            </section>
+
+        </main>
+
+
+        <!-- FOOTER -->
+
+        <footer class="coming-footer">
+
+            <p>
+                NetCore • Wireless Network Control
+            </p>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>

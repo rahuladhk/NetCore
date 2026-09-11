@@ -12,6 +12,15 @@
 </head>
 
 <body>
+    <script>
+        const userAgent = navigator.userAgent.toLowerCase();
+
+        const isWindows = userAgent.includes("windows");
+
+        if (!isWindows) {
+            window.location.href = "coming-soon.html";
+        }
+    </script>
 
     <div class="background">
 
