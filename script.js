@@ -496,8 +496,8 @@ function scrollToOutput() {
 function downloadLauncher() {
     const link = document.createElement("a");
 
-    link.href = "";
-    link.download = "NetCore-Launcher.exe";
+    link.href = "https://github.com/rahuladhk/NetCore/raw/main/NetCore-Launcher.zip";
+    link.download = "NetCore-Launcher.zip";
 
     document.body.appendChild(link);
     link.click();
