@@ -495,8 +495,8 @@ function scrollToOutput() {
 function downloadLauncher() {
     const link = document.createElement("a");
 
-    link.href = "https://github.com/rahuladhk/NetCore/raw/c1a75aeae0f68e5df857979b3c8b6202280b1ec4/Netcore-Luncher.zip";
-    link.download = "Netcore-Luncher.zip";
+    link.href = "https://github.com/rahuladhk/NetCore/raw/c1a75aeae0f68e5df857979b3c8b6202280b1ec4/NetCore-Launcher.zip";
+    link.download = "NetCore-Launcher.zip";
 
     document.body.appendChild(link);
     link.click();

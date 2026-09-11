@@ -1,250 +1,447 @@
-#=======================
-#     Methods
-#=======================
+# ============================================================
+# NETCORE LAUNCHER
+# ============================================================
+
 import subprocess
 import re
+import sys
+import os
+
+
+# ============================================================
+# BASE DIRECTORY
+# ============================================================
+
+# When running normally:
+#     BASE_DIR = folder containing NetCore_Launcher.py
+#
+# When running as EXE:
+#     BASE_DIR = folder containing NetCore_Launcher.exe
+
+if getattr(sys, 'frozen', False):
+    BASE_DIR = os.path.dirname(sys.executable)
+else:
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+os.chdir(BASE_DIR)
+
+
+# ============================================================
+# FLASK
+# ============================================================
+
+from flask import Flask, jsonify, request
+from flask_cors import CORS
+
+
+# ============================================================
+# APPLICATION
+# ============================================================
+
+app = Flask(__name__)
+CORS(app)
+
+
+# ============================================================
+# START HOTSPOT
+# ============================================================
 
 def start_hotspot(ssid, password):
 
-    with open('StartH.ps1', 'r', encoding='utf-8') as file:
-        powercommand = file.read()
+    try:
 
-    powercommand = re.sub(
-        r'^\s*\$config\.Ssid\s*=.*$',
-        f'$config.Ssid="{ssid}"',
-        powercommand,
-        flags=re.MULTILINE
-    )
+        ps1_file = os.path.join(BASE_DIR, "StartH.ps1")
+        bat_file = os.path.join(BASE_DIR, "StartH.bat")
 
-    powercommand = re.sub(
-        r'^\s*\$config\.Passphrase\s*=.*$',
-        f'$config.Passphrase="{password}"',
-        powercommand,
-        flags=re.MULTILINE
-    )
+        # ----------------------------------------------------
+        # Check files
+        # ----------------------------------------------------
 
-    with open('StartH.ps1', 'w', encoding='utf-8') as file:
-        file.write(powercommand)
+        if not os.path.exists(ps1_file):
+            return "ERROR: StartH.ps1 not found."
 
-    result = subprocess.run(
-        'StartH.bat',
-        capture_output=True,
-        text=True,
-        shell=True
-    )
+        if not os.path.exists(bat_file):
+            return "ERROR: StartH.bat not found."
 
-    print("========== START HOTSPOT OUTPUT ==========")
-    print(result.stdout)
-    print(result.stderr)
-    print("==========================================")
+        # ----------------------------------------------------
+        # Read PowerShell file
+        # ----------------------------------------------------
 
-    return result.stdout + result.stderr
+        with open(
+            ps1_file,
+            'r',
+            encoding='utf-8'
+        ) as file:
+
+            powercommand = file.read()
+
+        # ----------------------------------------------------
+        # Replace SSID
+        # ----------------------------------------------------
+
+        powercommand = re.sub(
+            r'^\s*\$config\.Ssid\s*=.*$',
+            f'$config.Ssid="{ssid}"',
+            powercommand,
+            flags=re.MULTILINE
+        )
+
+        # ----------------------------------------------------
+        # Replace Password
+        # ----------------------------------------------------
+
+        powercommand = re.sub(
+            r'^\s*\$config\.Passphrase\s*=.*$',
+            f'$config.Passphrase="{password}"',
+            powercommand,
+            flags=re.MULTILINE
+        )
+
+        # ----------------------------------------------------
+        # Save PowerShell file
+        # ----------------------------------------------------
+
+        with open(
+            ps1_file,
+            'w',
+            encoding='utf-8'
+        ) as file:
+
+            file.write(powercommand)
+
+        # ----------------------------------------------------
+        # Run BAT
+        # ----------------------------------------------------
+
+        result = subprocess.run(
+            bat_file,
+            capture_output=True,
+            text=True,
+            shell=True,
+            cwd=BASE_DIR
+        )
+
+        # ----------------------------------------------------
+        # Console output
+        # ----------------------------------------------------
+
+        print()
+        print("========== START HOTSPOT OUTPUT ==========")
+        print(result.stdout)
+        print(result.stderr)
+        print("==========================================")
+        print()
+
+        return result.stdout + result.stderr
+
+    except Exception as error:
+
+        print("START HOTSPOT ERROR:", error)
+
+        return str(error)
+
+
+# ============================================================
+# SYSTEM INFORMATION
+# ============================================================
 
 def systeminfo():
+
     result = subprocess.run(
         ['systeminfo'],
         capture_output=True,
         text=True
     )
 
-    return result.stdout
+    return result.stdout + result.stderr
+
+
+# ============================================================
+# IP CONFIGURATION
+# ============================================================
 
 def ipconfig():
+
     result = subprocess.run(
         ['ipconfig', '/all'],
         capture_output=True,
         text=True
     )
 
-    return result.stdout
+    return result.stdout + result.stderr
+
+
+# ============================================================
+# STOP HOTSPOT
+# ============================================================
 
 def stop_hotspot():
+
+    bat_file = os.path.join(
+        BASE_DIR,
+        "StopH.bat"
+    )
+
+    if not os.path.exists(bat_file):
+        return "ERROR: StopH.bat not found."
+
     result = subprocess.run(
-        ['StopH.bat'],
+        bat_file,
         capture_output=True,
         text=True,
-        shell=True
+        shell=True,
+        cwd=BASE_DIR
     )
 
     return result.stdout + result.stderr
 
+
+# ============================================================
+# DRIVER DETAILS
+# ============================================================
+
 def driver_details():
+
     result = subprocess.run(
-        ['netsh', 'wlan', 'show', 'driver'],
+        [
+            'netsh',
+            'wlan',
+            'show',
+            'driver'
+        ],
         capture_output=True,
         text=True
     )
 
-    return result.stdout
+    return result.stdout + result.stderr
+
+
+# ============================================================
+# SAVED NETWORKS
+# ============================================================
 
 def saved_networks():
-    net=subprocess.run(['netsh', 'wlan', 'show', 'profiles'], capture_output=True).stdout.decode()
-    names=re.findall('All User Profile     : (.*)\r', net)
-    result=''
+
+    result = ''
+
+    # --------------------------------------------------------
+    # Get Wi-Fi profiles
+    # --------------------------------------------------------
+
+    net = subprocess.run(
+        [
+            'netsh',
+            'wlan',
+            'show',
+            'profiles'
+        ],
+        capture_output=True
+    ).stdout.decode(
+        errors='ignore'
+    )
+
+    # --------------------------------------------------------
+    # Extract profile names
+    # --------------------------------------------------------
+
+    names = re.findall(
+        r'All User Profile\s*:\s*(.*)',
+        net
+    )
+
+    # --------------------------------------------------------
+    # Get passwords
+    # --------------------------------------------------------
+
     for ssid in names:
-        profiles=subprocess.run(['netsh', 'wlan', 'show', 'profiles', ssid, 'key=clear'], capture_output=True).stdout.decode()
-        key=re.findall('Key Content            : (.*)\r', profiles)
-        if len(key)>0:
-            result+='SSID          : '+ssid+ '\n'
-            result+='Password      : '+key[0]+'\n\n'
+
+        ssid = ssid.strip()
+
+        profiles = subprocess.run(
+            [
+                'netsh',
+                'wlan',
+                'show',
+                'profiles',
+                ssid,
+                'key=clear'
+            ],
+            capture_output=True
+        ).stdout.decode(
+            errors='ignore'
+        )
+
+        key = re.findall(
+            r'Key Content\s*:\s*(.*)',
+            profiles
+        )
+
+        result += f"SSID          : {ssid}\n"
+
+        if len(key) > 0:
+
+            result += (
+                f"Password      : "
+                f"{key[0].strip()}\n\n"
+            )
+
         else:
-            result+="SSID          : "+ssid+'\n'
-            result+="Password      : "+"None"+'\n\n'
-            
+
+            result += (
+                "Password      : None\n\n"
+            )
+
     return result
 
 
+# ============================================================
+# START HOTSPOT ROUTE
+# ============================================================
 
-
-
-
-#========================
-#       Server
-#========================
-
-from flask import Flask, jsonify, request
-from flask_cors import CORS
-
-app = Flask(__name__)
-
-CORS(app)
-
-
-# ==========================================
-# START HOTSPOT
-# ==========================================
-
-@app.route('/Start-Hotspot', methods=['POST'])
+@app.route(
+    '/Start-Hotspot',
+    methods=['POST']
+)
 def start_hotspot_route():
 
     print()
-    print("================================", flush=True)
-    print("     START-HOTSPOT REQUEST", flush=True)
-    print("================================", flush=True)
+    print("================================")
+    print("     START-HOTSPOT REQUEST")
+    print("================================")
 
     try:
 
-        # ------------------------------------------
-        # GET JSON DATA
-        # ------------------------------------------
+        # ----------------------------------------------------
+        # Get JSON
+        # ----------------------------------------------------
 
         data = request.get_json()
 
-        print("Received data:", data, flush=True)
+        print(
+            "Received data:",
+            data,
+            flush=True
+        )
 
         if not data:
-            print("ERROR: No data received.", flush=True)
+
+            print(
+                "ERROR: No data received.",
+                flush=True
+            )
 
             return jsonify({
                 "success": False,
                 "error": "No data received."
             }), 400
 
-
-        # ------------------------------------------
-        # GET SSID AND PASSWORD
-        # ------------------------------------------
+        # ----------------------------------------------------
+        # Get SSID
+        # ----------------------------------------------------
 
         ssid = data.get("ssid")
+
+        # ----------------------------------------------------
+        # Get password
+        # ----------------------------------------------------
+
         password = data.get("password")
 
+        print(
+            "SSID:",
+            ssid,
+            flush=True
+        )
 
-        print("SSID:", ssid, flush=True)
-        print("Password received:", "YES" if password else "NO", flush=True)
+        print(
+            "Password received:",
+            "YES" if password else "NO",
+            flush=True
+        )
 
-
-        # ------------------------------------------
-        # CHECK SSID
-        # ------------------------------------------
+        # ----------------------------------------------------
+        # Validate SSID
+        # ----------------------------------------------------
 
         if not ssid:
-
-            print("ERROR: SSID is empty.", flush=True)
 
             return jsonify({
                 "success": False,
                 "error": "SSID is required."
             }), 400
 
-
-        # ------------------------------------------
-        # CHECK PASSWORD
-        # ------------------------------------------
+        # ----------------------------------------------------
+        # Validate password
+        # ----------------------------------------------------
 
         if not password:
-
-            print("ERROR: Password is empty.", flush=True)
 
             return jsonify({
                 "success": False,
                 "error": "Password is required."
             }), 400
 
-
-        # ------------------------------------------
-        # CHECK PASSWORD LENGTH
-        # ------------------------------------------
+        # ----------------------------------------------------
+        # Password length
+        # ----------------------------------------------------
 
         if len(password) < 8:
 
-            print("ERROR: Password is too short.", flush=True)
-
             return jsonify({
                 "success": False,
-                "error": "Password must be at least 8 characters."
+                "error":
+                    "Password must be at least 8 characters."
             }), 400
 
-
-        # ==========================================
-        # START HOTSPOT
-        # ==========================================
-
-        print()
-        print("--------------------------------", flush=True)
-        print("CALLING Core.start()", flush=True)
-        print("--------------------------------", flush=True)
-
-
-        result = start_hotspot(ssid, password)
-
-
-        # ==========================================
-        # PRINT RESULT
-        # ==========================================
+        # ----------------------------------------------------
+        # Start hotspot
+        # ----------------------------------------------------
 
         print()
-        print("--------------------------------", flush=True)
-        print("CORE.PY RESULT", flush=True)
-        print("--------------------------------", flush=True)
+        print("--------------------------------")
+        print("CALLING start_hotspot()")
+        print("--------------------------------")
 
-        print(result, flush=True)
+        result = start_hotspot(
+            ssid,
+            password
+        )
 
-        print("--------------------------------", flush=True)
-        print("HOTSPOT START FINISHED", flush=True)
-        print("================================", flush=True)
         print()
+        print("--------------------------------")
+        print("HOTSPOT RESULT")
+        print("--------------------------------")
 
+        print(
+            result,
+            flush=True
+        )
 
-        # ==========================================
-        # SEND RESULT TO setup.html
-        # ==========================================
+        print("--------------------------------")
+        print("HOTSPOT START FINISHED")
+        print("================================")
+        print()
 
         return jsonify({
             "success": True,
             "data": result
         })
 
-
     except Exception as error:
 
         print()
-        print("================================", flush=True)
-        print("       START HOTSPOT ERROR", flush=True)
-        print("================================", flush=True)
-        print("ERROR:", error, flush=True)
-        print("================================", flush=True)
-        print()
+        print("================================")
+        print("       START HOTSPOT ERROR")
+        print("================================")
 
+        print(
+            "ERROR:",
+            error,
+            flush=True
+        )
+
+        print("================================")
+        print()
 
         return jsonify({
             "success": False,
@@ -252,22 +449,31 @@ def start_hotspot_route():
         }), 500
 
 
-
-# ==========================================
-# STOP HOTSPOT
-# ==========================================
+# ============================================================
+# STOP HOTSPOT ROUTE
+# ============================================================
 
 @app.route('/Stop-Hotspot')
 def get_stop_hotspot():
 
     try:
 
-        print("Stopping hotspot...", flush=True)
+        print(
+            "Stopping hotspot...",
+            flush=True
+        )
 
         result = stop_hotspot()
 
-        print("Stop result:", flush=True)
-        print(result, flush=True)
+        print(
+            "Stop result:",
+            flush=True
+        )
+
+        print(
+            result,
+            flush=True
+        )
 
         return jsonify({
             "success": True,
@@ -276,7 +482,11 @@ def get_stop_hotspot():
 
     except Exception as error:
 
-        print("STOP HOTSPOT ERROR:", error, flush=True)
+        print(
+            "STOP HOTSPOT ERROR:",
+            error,
+            flush=True
+        )
 
         return jsonify({
             "success": False,
@@ -284,10 +494,9 @@ def get_stop_hotspot():
         }), 500
 
 
-
-# ==========================================
-# DRIVER DETAILS
-# ==========================================
+# ============================================================
+# DRIVER DETAILS ROUTE
+# ============================================================
 
 @app.route('/driver-details')
 def get_driver_details():
@@ -309,10 +518,9 @@ def get_driver_details():
         }), 500
 
 
-
-# ==========================================
-# SYSTEM INFO
-# ==========================================
+# ============================================================
+# SYSTEM INFORMATION ROUTE
+# ============================================================
 
 @app.route('/System-info')
 def get_systeminfo():
@@ -334,10 +542,9 @@ def get_systeminfo():
         }), 500
 
 
-
-# ==========================================
-# IPCONFIG
-# ==========================================
+# ============================================================
+# IPCONFIG ROUTE
+# ============================================================
 
 @app.route('/ipconfig')
 def get_ipconfig():
@@ -359,10 +566,9 @@ def get_ipconfig():
         }), 500
 
 
-
-# ==========================================
-# SAVED NETWORKS
-# ==========================================
+# ============================================================
+# SAVED NETWORKS ROUTE
+# ============================================================
 
 @app.route('/saved-networks')
 def get_saved_networks():
@@ -384,22 +590,35 @@ def get_saved_networks():
         }), 500
 
 
-
-# ==========================================
-# RUN SERVER
-# ==========================================
+# ============================================================
+# START SERVER
+# ============================================================
 
 if __name__ == '__main__':
 
     print()
-    print("================================", flush=True)
-    print("          NETCORE SERVER", flush=True)
-    print("================================", flush=True)
-    print("Server running at:", flush=True)
-    print("http://127.0.0.1:5000", flush=True)
-    print("================================", flush=True)
-    print()
+    print("================================")
+    print("          NETCORE SERVER")
+    print("================================")
 
+    print(
+        "NetCore folder:",
+        BASE_DIR,
+        flush=True
+    )
+
+    print(
+        "Server running at:",
+        flush=True
+    )
+
+    print(
+        "http://127.0.0.1:5000",
+        flush=True
+    )
+
+    print("================================")
+    print()
 
     app.run(
         host='127.0.0.1',

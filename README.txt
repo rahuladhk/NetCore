@@ -1,10 +1,7 @@
-Download python file from github on your system
+Download NetCore-Launcher.zip file from github on your system.
 
-Open python folder
+Extract and run NetCore-Launcher.exe file.
 
-Open directory in terminal and run:
-	python install -r Requirements.txt
+You will see a console on your screen running flask server.
 
-Using terminal Run server.py
-
-Open browser and search rahuladhk.github.io/NetCore
+Open browser and search rahuladhk.github.io/NetCore.
