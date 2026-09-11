@@ -495,7 +495,7 @@ function scrollToOutput() {
 function downloadLauncher() {
     const link = document.createElement("a");
 
-    link.href = "https://github.com/rahuladhk/NetCore/blob/4288551c7cdc14015bc03f216695dc1465ff2d66/Launcher.zip";
+    link.href = "https://github.com/rahuladhk/NetCore/blob/3e7e369a4f7c4e3fb725f460748c0c5b8644a7e6/Launcher.zip";
     link.download = "Launcher.zip";
 
     document.body.appendChild(link);
