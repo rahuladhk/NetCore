@@ -1,5 +1,5 @@
 #=======================
-#       Core-Program
+#     Methods
 #=======================
 import subprocess
 import re

@@ -171,7 +171,7 @@ async function stopHotspot() {
 
         output.innerHTML = `
             <p>
-                Unable to connect to Python application.
+                Unable to connect to Server.
             </p>
         `;
 
@@ -204,7 +204,7 @@ async function driverInfo() {
         "Loading...";
 
     output.innerHTML =
-        "<p>Connecting to Python...</p>";
+        "<p>Connecting to server...</p>";
 
 
     try {
@@ -252,7 +252,7 @@ async function driverInfo() {
 
         output.innerHTML = `
             <p>
-                Unable to connect to Python application.
+                Unable to connect to Server.
             </p>
         `;
 
@@ -285,7 +285,7 @@ async function systeminfo() {
         "Loading...";
 
     output.innerHTML =
-        "<p>Connecting to Python...</p>";
+        "<p>Connecting to Server...</p>";
 
 
     try {
@@ -333,7 +333,7 @@ async function systeminfo() {
 
         output.innerHTML = `
             <p>
-                Unable to connect to Python application.
+                Unable to connect to Server.
             </p>
         `;
 
@@ -396,7 +396,7 @@ async function ipConfigurations() {
 
 
         output.innerHTML =
-            "<p>Unable to connect to Python application.</p>";
+            "<p>Unable to connect to Server.</p>";
 
         outputStatus.textContent =
             "Connection failed";
@@ -456,7 +456,7 @@ async function saved_networks() {
 
 
         output.innerHTML =
-            "<p>Unable to connect to Python application.</p>";
+            "<p>Unable to connect to Server.</p>";
 
         outputStatus.textContent =
             "Connection failed";
