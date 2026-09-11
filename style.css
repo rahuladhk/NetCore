@@ -142,7 +142,7 @@ body {
 .control-panel {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 20px;
 }
 
 .control-card {
@@ -172,6 +172,11 @@ body {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
+.download-card {
+    grid-column: 1 / 4;
+    justify-self: center;
+}
+
 
 /* Card icons */
 
@@ -188,6 +193,10 @@ body {
     font-size: 20px;
 
     margin-bottom: 20px;
+}
+
+.download-card {
+    grid-column: 2;
 }
 
 .start-icon {

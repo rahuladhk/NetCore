@@ -487,3 +487,19 @@ function scrollToOutput() {
     }
 
 }
+
+// ======================================================
+// DOWNLOAD LAUNCHER
+// ======================================================
+
+
+function downloadLauncher() {
+    const link = document.createElement("a");
+
+    link.href = "";
+    link.download = "NetCore-Launcher.exe";
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
